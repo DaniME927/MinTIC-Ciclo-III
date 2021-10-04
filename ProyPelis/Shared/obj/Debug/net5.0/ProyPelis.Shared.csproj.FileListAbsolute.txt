@@ -1,0 +1,12 @@
+C:\ProysCicloIII\ProyPelis\Shared\bin\Debug\net5.0\ProyPelis.Shared.deps.json
+C:\ProysCicloIII\ProyPelis\Shared\bin\Debug\net5.0\ProyPelis.Shared.dll
+C:\ProysCicloIII\ProyPelis\Shared\bin\Debug\net5.0\ref\ProyPelis.Shared.dll
+C:\ProysCicloIII\ProyPelis\Shared\bin\Debug\net5.0\ProyPelis.Shared.pdb
+C:\ProysCicloIII\ProyPelis\Shared\obj\Debug\net5.0\ProyPelis.Shared.csproj.AssemblyReference.cache
+C:\ProysCicloIII\ProyPelis\Shared\obj\Debug\net5.0\ProyPelis.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProysCicloIII\ProyPelis\Shared\obj\Debug\net5.0\ProyPelis.Shared.AssemblyInfoInputs.cache
+C:\ProysCicloIII\ProyPelis\Shared\obj\Debug\net5.0\ProyPelis.Shared.AssemblyInfo.cs
+C:\ProysCicloIII\ProyPelis\Shared\obj\Debug\net5.0\ProyPelis.Shared.csproj.CoreCompileInputs.cache
+C:\ProysCicloIII\ProyPelis\Shared\obj\Debug\net5.0\ProyPelis.Shared.dll
+C:\ProysCicloIII\ProyPelis\Shared\obj\Debug\net5.0\ref\ProyPelis.Shared.dll
+C:\ProysCicloIII\ProyPelis\Shared\obj\Debug\net5.0\ProyPelis.Shared.pdb

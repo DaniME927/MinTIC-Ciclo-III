@@ -1,0 +1,13 @@
+@page "/movies"
+@using ProyPelis.Client.Pages.Components
+@inject IServiceMovie movie
+<div class="jumbotron">
+    <MovieCardComponentList Movies = "Movies"></MovieCardComponentList> 
+</div>
+@code{
+    @* Creamos instancia de la interfaz *@
+    private List<Movie>Movies;
+    protected override void OnInitialized(){
+        Movies = movie.GetMovies();
+    }
+}
