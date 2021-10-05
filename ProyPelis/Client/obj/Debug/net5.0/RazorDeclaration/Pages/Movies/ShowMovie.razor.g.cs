@@ -96,6 +96,7 @@ using ProyPelis.Client.Services;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/")]
     public partial class ShowMovie : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

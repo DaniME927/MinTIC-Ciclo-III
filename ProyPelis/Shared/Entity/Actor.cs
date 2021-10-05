@@ -4,6 +4,7 @@ namespace ProyPelis.Shared.Entity
     public class Actor
     {
         public string ActorName {get;set;}
+        public string Image{get;set;}
         public DocumentType DocumentType {get;set;}
         public string Document {get;set;}
         public Gender Gender {get;set;}

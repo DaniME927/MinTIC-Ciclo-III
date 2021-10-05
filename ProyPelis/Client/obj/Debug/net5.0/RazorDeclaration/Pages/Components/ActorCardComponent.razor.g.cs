@@ -104,7 +104,7 @@ using ProyPelis.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\ProysCicloIII\ProyPelis\Client\Pages\Components\ActorCardComponent.razor"
+#line 36 "C:\ProysCicloIII\ProyPelis\Client\Pages\Components\ActorCardComponent.razor"
       
     [Parameter] public List<Actor> Actors{get;set;} 
 
