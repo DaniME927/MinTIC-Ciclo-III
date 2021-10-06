@@ -6,7 +6,7 @@ namespace ProyPelis.Shared.Entity
     {
         public int Id {get;set;}
         /* Validamos que el campo nombre es requerido */
-        [Required(ErrorMessage = "El campo {0} es requerido")] 
+        [Required(ErrorMessage = "The field {0} is required")] 
         public string Category {get;set;}
     }
 }

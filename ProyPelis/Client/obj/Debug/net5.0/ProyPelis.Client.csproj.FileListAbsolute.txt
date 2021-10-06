@@ -666,3 +666,11 @@ C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Movies
 C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Movies\FiltroMovies.razor.g.cs
 C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Categories\ShowCategories.razor.g.cs
 C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Categories\ShowCategories.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Movies\FormMovie.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Components\SelectorMultiple.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Components\ImageComponent.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Components\ImageComponent.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Components\SelectorMultiple.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Movies\FormMovie.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Actors\FormActor.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Actors\FormActor.razor.g.cs

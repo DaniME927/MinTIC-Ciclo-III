@@ -96,13 +96,6 @@ using ProyPelis.Client.Services;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\ProysCicloIII\ProyPelis\Client\Pages\Actors\ShowActors.razor"
-using ProyPelis.Client.Pages.Components;
-
-#line default
-#line hidden
-#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/actors")]
     public partial class ShowActors : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -111,18 +104,6 @@ using ProyPelis.Client.Pages.Components;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 8 "C:\ProysCicloIII\ProyPelis\Client\Pages\Actors\ShowActors.razor"
-                                          
-    private List<Actor>Actors;
-    protected override void OnInitialized(){
-        Actors = actor.GetActors();
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceActor actor { get; set; }
     }
 }
 #pragma warning restore 1591

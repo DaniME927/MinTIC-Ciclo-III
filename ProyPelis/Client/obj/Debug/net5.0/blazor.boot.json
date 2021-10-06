@@ -195,13 +195,13 @@
       "mscorlib.dll": "sha256-7WjHY56PbksCp7YOxNV59r6MqLujjAH8vhnMJ+zVezY=",
       "netstandard.dll": "sha256-5TcSqPhm3fAT6s3NH7+BMGakcfGgZGd3\/\/cVwVs2VPI=",
       "System.Private.CoreLib.dll": "sha256-VJv3DLM\/G0m\/RnTeWL9X8mkbxlsn8nNRhm0BHYEY+uo=",
-      "ProyPelis.Shared.dll": "sha256-rUYVh7uvek8aSW\/p\/GrCeiuIn3d25M+y5zI7ZQAslhk=",
-      "ProyPelis.Client.dll": "sha256-LCd6Blw9V+1pikeNby\/d95WiY8HpndW\/zjsyb5Ub3Lo="
+      "ProyPelis.Shared.dll": "sha256-XBVjzm5Y9H+0JLtQQJzih\/PQVOjMl8sFhqMDhMhaeh8=",
+      "ProyPelis.Client.dll": "sha256-dUQoMl8Vbvb7FZ\/D1TOrW4NlCEbO7nmfWRaNbW0OPzM="
     },
     "lazyAssembly": null,
     "pdb": {
-      "ProyPelis.Shared.pdb": "sha256-oOz0FMyYjVnfOrcTlBFeRsP2nUcnyn3IyX\/R+F2Ua24=",
-      "ProyPelis.Client.pdb": "sha256-1cSCRtyi468bVLJhvVIYOj5aMERUJjDEJ7SXN1luaEw="
+      "ProyPelis.Shared.pdb": "sha256-V1byeI2R\/LdAORrQzyu8k6AokwJ2kh9qYriQkKvGrIg=",
+      "ProyPelis.Client.pdb": "sha256-0D8hQW+m5mAAk9HsuAWU1yMvFUApgcujCzc4i+vwgPQ="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-PvlHrby1PYtdX46ITs6pB8iDNqXNcewh8Eoa\/Gm2+GM=",

@@ -103,7 +103,7 @@ using ProyPelis.Client.Pages.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movies")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movie")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

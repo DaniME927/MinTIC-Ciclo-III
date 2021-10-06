@@ -1,0 +1,12 @@
+@page "/actors/create"
+@using ProyPelis.Client.Pages.Components
+
+<FormActor OnValidSubmit="Create" Actor="Actor"></FormActor>
+
+@code {
+    private Actor Actor=new Actor();
+    void Create()
+    {
+        Console.WriteLine("");
+    }
+}

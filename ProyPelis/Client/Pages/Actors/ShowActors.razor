@@ -1,13 +1,12 @@
 @page "/actors"
-@using ProyPelis.Client.Pages.Components
-@inject IServiceActor actor
+@* @using ProyPelis.Client.Pages.Components
+@inject IServiceActor actor *@
 
-<ActorCardComponent Actors = "Actors"></ActorCardComponent>
+<div class="jumbotron">
+    <div class="form-group">
+        <a href="actors/create" class="btn btn-info">Create Actor</a>
+    </div>
+</div>
 
 @code{
-    @* Creamos instancia de la interfaz *@
-    private List<Actor>Actors;
-    protected override void OnInitialized(){
-        Actors = actor.GetActors();
-    }
 }

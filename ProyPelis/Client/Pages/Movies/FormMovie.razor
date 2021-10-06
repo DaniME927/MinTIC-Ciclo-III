@@ -1,0 +1,114 @@
+@using ProyPelis.Client.Pages.Components
+@using ProyPelis.Client.Model
+
+<EditForm Model="Movie" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="container">
+        <div class="jumbotron">
+            @* Nombre de la pelicula *@
+            <div class="form-group">
+                <div class="row">
+                    <div class="col col-sm-9">
+                        @* Input para ingresar el nombre de la película *@
+                        <InputText class="form-control" @bind-Value="@Movie.MovieName" placeholder="Name Movie"></InputText>
+                        <ValidationMessage For="@(() => Movie.MovieName)"></ValidationMessage>
+                    </div>
+      
+                    @* Checkbox para validar si la pelicula esta o no en cartelera *@
+                    <div class="col col-sm-3">
+                        <div>
+                            <InputCheckbox id="on_billboard" class="form-check-input" @bind-Value="@Movie.OnBillboard"></InputCheckbox>
+                            <label class="form-check-label" for="on_billboard">On Billboard</label>
+                            <ValidationMessage For="@(() => Movie.OnBillboard)"></ValidationMessage>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Video de la pelicula *@
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        @* Input para ingresar el tràiler de la pelìcula *@
+                        <InputText class="form-control" @bind-Value="@Movie.Trailer" placeholder="Trailer of the movie">
+                        </InputText>
+                        <ValidationMessage For="@(() => Movie.Trailer)"></ValidationMessage>
+                    </div>
+            
+
+                    @* Fecha de lanzamiento de la pelicula => Calendar *@
+                    <div class="col">
+                        <div class="form-group"> 
+                            <InputDate class="form-control" @bind-Value="@Movie.ReleaseDate">Premier Movie</InputDate>
+                            <ValidationMessage For="@(() => Movie.ReleaseDate)"></ValidationMessage>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Creamos un textarea para la redacción de la sinopsis de la pelicula *@
+            <div class="form-group">
+                <InputTextArea class="form-control" @bind-Value="@Movie.Synopsis" placeholder="Synopsis">
+                </InputTextArea>
+                <ValidationMessage For="@(() => Movie.Synopsis)"></ValidationMessage>
+            </div>
+
+            @*Crear selector multiple, selecciòn categorìas*@
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label>Choose categories</label>
+                        <div>
+                            <SelectorMultiple Seleccionados="Seleccionados" NoSeleccionados="NoSeleccionados">
+                            </SelectorMultiple>
+                        </div>
+                    </div>
+                    <div class="col">
+                        @* USaremos el componente para cargar imagenes => Poster de la pelicula *@
+                        <div class="form-group">
+                            <ImageComponent Label="picture" ImageSelected="ImageSelected" ImageURL=""></ImageComponent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Botón para enviar la información al método create o edit *@
+            <div>
+                <button type="submit" class="btn btn-success">Save</button>
+                <button type="submit" class="btn btn-danger">Cancel</button>
+            </div>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    @* private string imageT; *@
+    [Parameter] public Movie Movie { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+    [Parameter] public List<CategoryMovie> CategoriasSeleccionadas { get; set; } = new List<CategoryMovie>();
+    [Parameter] public List<CategoryMovie> CategoriasNoSeleccionadas { get; set; } = new List<CategoryMovie>();
+
+    private string ImageTemporal;
+    private List<SelectorMultipleModel> NoSeleccionados { get; set; } = new List<SelectorMultipleModel>();
+
+    private List<SelectorMultipleModel> Seleccionados { get; set; } = new List<SelectorMultipleModel>();
+
+    private void ImageSelected(string imageB64)
+    {
+        Movie.Image = imageB64;
+    }
+
+
+    protected override void OnInitialized()
+    {
+        Seleccionados = CategoriasSeleccionadas.Select(x => new SelectorMultipleModel(x.Id.ToString(), x.Category)).ToList();
+        NoSeleccionados = CategoriasNoSeleccionadas.Select(x => new SelectorMultipleModel(x.Id.ToString(),
+        x.Category)).ToList();
+        if (!string.IsNullOrWhiteSpace(Movie.Image))
+        {
+            ImageTemporal = Movie.Image;
+            Movie.Image = null;
+        }
+
+    }
+}

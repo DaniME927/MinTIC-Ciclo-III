@@ -96,6 +96,14 @@ using ProyPelis.Client.Services;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\ProysCicloIII\ProyPelis\Client\Pages\Actors\EditActor.razor"
+using ProyPelis.Client.Pages.Components;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/actors/edit/{ActorId:int}")]
     public partial class EditActor : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -103,6 +111,28 @@ using ProyPelis.Client.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 6 "C:\ProysCicloIII\ProyPelis\Client\Pages\Actors\EditActor.razor"
+      
+    [Parameter] public int ActorId {get;set;}
+    Actor Actor = new Actor();
+    protected override void OnInitialized()
+    {
+        Actor = new Actor()
+        {
+            Id = ActorId,
+            ActorName = "Demi Lovato",
+            Birthdate = DateTime.Today
+        };
+    }
+
+    private void Edit() {
+        Console.WriteLine("Edit Actor");
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

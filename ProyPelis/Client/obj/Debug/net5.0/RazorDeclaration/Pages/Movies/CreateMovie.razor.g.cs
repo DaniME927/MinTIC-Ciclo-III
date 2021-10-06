@@ -96,6 +96,13 @@ using ProyPelis.Client.Services;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\ProysCicloIII\ProyPelis\Client\Pages\Movies\CreateMovie.razor"
+using ProyPelis.Client.Pages.Components;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/movies/create")]
     public partial class CreateMovie : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,12 +112,39 @@ using ProyPelis.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\ProysCicloIII\ProyPelis\Client\Pages\Movies\CreateMovie.razor"
+#line 6 "C:\ProysCicloIII\ProyPelis\Client\Pages\Movies\CreateMovie.razor"
        
+    private Movie Movie = new Movie();
+    private List<CategoryMovie> CategoriasNoSeleccionadas = new List<CategoryMovie>();
+
+    protected override void OnInitialized()
+    {
+        CategoriasNoSeleccionadas = new List<CategoryMovie>(){
+            new CategoryMovie(){Id = 1, Category="Comedy"},
+            new CategoryMovie(){Id = 2, Category="Scary"},
+            new CategoryMovie(){Id = 3, Category="Action"},
+            new CategoryMovie(){Id = 4, Category="Documentaries"},
+            new CategoryMovie(){Id = 5, Category="Comedy"}
+        };
+    }
     void Create()
     {
+        
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 22 "C:\ProysCicloIII\ProyPelis\Client\Pages\Movies\CreateMovie.razor"
+                                                                                                        
         Console.WriteLine(navigationManager.Uri);
         navigationManager.NavigateTo("movie");
+        Console.WriteLine($"Movie: {Movie.MovieName}");
+        Console.WriteLine($"ReleaseDate: {Movie.ReleaseDate}");
+        Console.WriteLine($"On Billboard: {Movie.OnBillboard}");
+        Console.WriteLine($"Picture: {Movie.Image}");
+        Console.WriteLine($"Synopsis: {Movie.Synopsis}");
+
     }
 
 #line default

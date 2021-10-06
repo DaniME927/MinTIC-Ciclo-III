@@ -104,7 +104,7 @@ using ProyPelis.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\ProysCicloIII\ProyPelis\Client\Shared\NavMenu.razor"
+#line 44 "C:\ProysCicloIII\ProyPelis\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
