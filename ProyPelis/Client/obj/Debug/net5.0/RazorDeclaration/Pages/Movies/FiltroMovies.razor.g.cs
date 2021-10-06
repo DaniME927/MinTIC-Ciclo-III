@@ -96,8 +96,15 @@ using ProyPelis.Client.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movies/create")]
-    public partial class CreateMovie : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "C:\ProysCicloIII\ProyPelis\Client\Pages\Movies\FiltroMovies.razor"
+using ProyPelis.Client.Pages.Components;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movies/search")]
+    public partial class FiltroMovies : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,18 +112,45 @@ using ProyPelis.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\ProysCicloIII\ProyPelis\Client\Pages\Movies\CreateMovie.razor"
+#line 50 "C:\ProysCicloIII\ProyPelis\Client\Pages\Movies\FiltroMovies.razor"
        
-    void Create()
-    {
-        Console.WriteLine(navigationManager.Uri);
-        navigationManager.NavigateTo("movie");
+    private List<Movie> Movies;
+    string movie_name="";
+    string categorySelected="";
+    private bool futurespremiers = false;
+    private bool onBillboard = false;
+
+    protected override void OnInitialized(){
+        Movies = movie.GetMovies();
+    }
+
+    private List<CategoryMovie> categories = new List<CategoryMovie>();
+    private void MovieNameKeyPress(KeyboardEventArgs e){
+        if (e.Key == "Enter")
+        {
+            ChargeNewMovies();
+        }
+    }
+    private void ChargeNewMovies(){
+        Movies = movie.GetMovies().Where(x=>x.MovieName.ToLower().Contains(movie_name.ToLower())).ToList();
+        Console.WriteLine($"Name movie: {movie_name}");
+        Console.WriteLine($"Selected category: {categorySelected}");
+        Console.WriteLine($"Futures premiers: {futurespremiers}");
+        Console.WriteLine($"On Billboard: {onBillboard}");
+    }
+
+    private void CleanFields(){
+        Movies = movie.GetMovies(); 
+        movie_name="";
+        categorySelected="0";
+        futurespremiers = false;
+        onBillboard = false;
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceMovie movie { get; set; }
     }
 }
 #pragma warning restore 1591

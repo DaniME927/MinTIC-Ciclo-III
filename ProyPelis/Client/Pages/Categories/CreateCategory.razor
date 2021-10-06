@@ -1,6 +1,9 @@
 @page "/categories/create"
-<h6>Create Category</h6>
-
+<FormCategory OnValidSubmit="Create" CategoryMovie="CategoryMovie"></FormCategory>
 @code {
-    
+    private CategoryMovie CategoryMovie = new CategoryMovie();
+    private void Create()
+    {
+        Console.WriteLine($"Name of category: {CategoryMovie.Category}");
+    }
 }

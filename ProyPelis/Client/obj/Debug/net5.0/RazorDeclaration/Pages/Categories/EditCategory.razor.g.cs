@@ -96,6 +96,7 @@ using ProyPelis.Client.Services;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/categories/edit/{Id:int}")]
     public partial class EditCategory : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -103,6 +104,27 @@ using ProyPelis.Client.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 4 "C:\ProysCicloIII\ProyPelis\Client\Pages\Categories\EditCategory.razor"
+       
+    [Parameter] public int Id {get;set;}
+    private CategoryMovie CategoryMovie;
+
+    protected override void OnInitialized()
+    {
+        CategoryMovie = new CategoryMovie()
+        {Id = Id, Category = "Comedy"};
+    }
+
+    private void Edit()
+    {
+        Console.WriteLine($"Id: {CategoryMovie.Id}");
+        Console.WriteLine($"Id: {CategoryMovie.Category}");
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

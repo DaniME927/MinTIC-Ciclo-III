@@ -1,0 +1,20 @@
+<EditForm Model = "CategoryMovie" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="form-group">
+        <label class="form-label">
+            Category
+        </label>
+        <div class="mb-3">
+            <InputText class="form-control" @bind-Value="@CategoryMovie.Category"></InputText>
+            <ValidationMessage For="@(()=>CategoryMovie.Category)"></ValidationMessage>
+        </div>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-success">Save</button>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter] public CategoryMovie CategoryMovie {get;set;}
+    [Parameter] public EventCallback OnValidSubmit {get;set;}
+}

@@ -1,0 +1,83 @@
+@using ProyPelis.Client.Pages.Components
+@inject IServiceMovie movie
+
+@page "/movies/search"
+<div class="jumbotron">
+    <div class="row mb-3" >
+        <div class="col">
+            <div class="form-group mb-2">
+                <label for="movie_name" class="sr-only">Movie Name</label>
+                <input type="text" @bind-value="movie_name" @bind-value:event="oninput" @onkeypress="@((KeyboardEventArgs e)=>MovieNameKeyPress(e))" class="form-control" id="movie_name" placeholder="Search movie"/>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="form-group mb-2">
+                <select class="form-control" @bind="categorySelected">
+                    <option value="0">Choose a category</option>
+                    @foreach (var item in categories)
+                    {
+                        <option value="@item.Id">@item.Category</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3 justify-content-md-center">
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="checkbox" class="form-check-input" id="premiers" @bind="futurespremiers">
+            <label class="form-check-label" for="premiers">Futures premiers</label>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="checkbox" class="form-check-input" id="billboard" @bind="onBillboard">
+            <label class="form-check-label" for="premiers">On Billboard</label>
+        </div>
+    </div>
+
+    <div class="justify-content-center">
+        <button type="button" class="btn btn-primary mb-3 btn-sm" @onclick="ChargeNewMovies">
+            Filter
+        </button>
+        <button type="button" class="btn btn-danger mb-3 btn-sm" @onclick="CleanFields">
+            Clean Fields
+        </button>
+    </div>
+</div>
+
+<MovieCardComponent Movies = "Movies"></MovieCardComponent>
+
+@code {
+    private List<Movie> Movies;
+    string movie_name="";
+    string categorySelected="";
+    private bool futurespremiers = false;
+    private bool onBillboard = false;
+
+    protected override void OnInitialized(){
+        Movies = movie.GetMovies();
+    }
+
+    private List<CategoryMovie> categories = new List<CategoryMovie>();
+    private void MovieNameKeyPress(KeyboardEventArgs e){
+        if (e.Key == "Enter")
+        {
+            ChargeNewMovies();
+        }
+    }
+    private void ChargeNewMovies(){
+        Movies = movie.GetMovies().Where(x=>x.MovieName.ToLower().Contains(movie_name.ToLower())).ToList();
+        Console.WriteLine($"Name movie: {movie_name}");
+        Console.WriteLine($"Selected category: {categorySelected}");
+        Console.WriteLine($"Futures premiers: {futurespremiers}");
+        Console.WriteLine($"On Billboard: {onBillboard}");
+    }
+
+    private void CleanFields(){
+        Movies = movie.GetMovies(); 
+        movie_name="";
+        categorySelected="0";
+        futurespremiers = false;
+        onBillboard = false;
+    }
+}

@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace ProyPelis.Client.Pages.Movies
+namespace ProyPelis.Client.Pages.Components
 {
     #line hidden
     using System;
@@ -96,8 +96,7 @@ using ProyPelis.Client.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movies/create")]
-    public partial class CreateMovie : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class MovieComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,18 +104,19 @@ using ProyPelis.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\ProysCicloIII\ProyPelis\Client\Pages\Movies\CreateMovie.razor"
+#line 16 "C:\ProysCicloIII\ProyPelis\Client\Pages\Components\MovieComponent.razor"
        
-    void Create()
+    [Parameter] public Movie Movie{get;set;}
+    [Parameter] public EventCallback<Movie> DeleteMovie{get;set;}
+    private string urlMovie = string.Empty;
+    protected override void OnInitialized()
     {
-        Console.WriteLine(navigationManager.Uri);
-        navigationManager.NavigateTo("movie");
+        urlMovie = $"movie/";
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
     }
 }
 #pragma warning restore 1591

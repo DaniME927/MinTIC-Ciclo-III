@@ -1,6 +1,15 @@
 @page "/movies/create"
-<h6>Create Movie</h6>
+@inject NavigationManager navigationManager
+<div class="jumbotron">
+    <div class="form-group mb-3">
+        <button class="btn btn-info" @onclick="Create">Create Movie</button>
+    </div>
+</div>
 
 @code {
-
+    void Create()
+    {
+        Console.WriteLine(navigationManager.Uri);
+        navigationManager.NavigateTo("movie");
+    }
 }

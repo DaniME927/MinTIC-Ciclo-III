@@ -104,6 +104,18 @@ using ProyPelis.Client.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 3 "C:\ProysCicloIII\ProyPelis\Client\Pages\Categories\CreateCategory.razor"
+       
+    private CategoryMovie CategoryMovie = new CategoryMovie();
+    private void Create()
+    {
+        Console.WriteLine($"Name of category: {CategoryMovie.Category}");
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

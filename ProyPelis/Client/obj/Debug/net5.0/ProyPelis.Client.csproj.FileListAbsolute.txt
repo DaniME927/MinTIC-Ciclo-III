@@ -658,3 +658,11 @@ C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Compon
 C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Components\ActorCardComponent.razor.g.cs
 C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Components\CustomNotFound.razor.g.cs
 C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Components\CustomNotFound.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Components\MovieComponent.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Components\MovieComponent.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Categories\FormCategory.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Categories\FormCategory.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Movies\FiltroMovies.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Movies\FiltroMovies.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Categories\ShowCategories.razor.g.cs
+C:\ProysCicloIII\ProyPelis\Client\obj\Debug\net5.0\Razor\Pages\Categories\ShowCategories.razor.g.cs
